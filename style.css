@@ -1,0 +1,121 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: aliceblue;
+    /* -webkit-text-stroke: px black; */
+}
+
+#unsplashImg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+    width: 100vw;  
+    height: 100vh; 
+}
+
+#tempSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 4.5vw;
+    margin-right: 1vw;
+    font-size: 1.5vw;
+    
+}
+
+#tempDiv {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3vw;
+    margin: 0.5vw;
+margin-top: 1vw;
+    position: absolute;  
+    top: 0;    
+    right: 0;
+    
+}
+
+
+
+#date{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10vw;
+    transform: translate(-50%, -50%);
+}
+
+#quoteContainer {
+    position: absolute;
+    top: 75%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    backdrop-filter: blur(2px);
+}
+
+#quote{
+    font-style: italic;
+    margin-bottom: 0.5vw;
+}
+
+#todoListInput{
+    position: absolute;
+    top: 65%;  
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5vw;
+    text-align: left;
+    background: none;  
+    border: none;     
+    border-bottom: 1px solid aliceblue;
+    min-width: 40vw;
+    padding: 0.5vw;    
+
+}
+#todoListInput:focus {
+    outline: none;     /* Remove outline when the input is focused */
+}
+#todoListInput::placeholder {
+    color: white;      /* Change placeholder text to white */
+    text-align: left;  /* Align placeholder text to the left */
+}
+#list {
+    list-style-type: none;  
+    margin-left: 2vw;
+    backdrop-filter: blur(4px);
+    width: 20vw;
+
+}
+
+#list li {
+    display: flex;         
+    align-items: left;   
+    margin-bottom: 1vw;    
+    margin-left: 2vw;
+    font-size: 1.5vw; 
+         
+}
+
+
+.todo-checkbox {    
+    appearance: none;       
+    min-width: 20px;           
+    height: 20px;           
+    background-color: transparent;  
+    border: 2px solid white; 
+    margin-right: 1vw;
+    margin-top: 0.2vw;     
+}
+
+.todo-checkbox:checked{
+    background-color: white;
+}
