@@ -1,8 +1,9 @@
-# Momentum Lab
+# Momentum Lab Clone
 
 Hi there 👋! Welcome to the **Momentum Lab** project.
 
-This was a lab from the **Software Engineering Bootcamp** provided by **General Assembly**. We were tasked with creating a **Momentum-like website**, and here's the outcome!
+This was a lab from the **Software Engineering Bootcamp** provided by General Assembly. Each participant worked individually to develop their own Momentum-like website—and here’s my version!
+
 
 ## 📜 Project Overview
 
