@@ -44,16 +44,21 @@ function init(){
 //////////////////////////////////////// Weather and Temperature from Open Weather ////////////////////////////////////////
 
     async function getOpenWeatherTemperature(){
-        const response = await axios({ //axios takes an argument (an obj)
-                method: 'get',
-                url: "https://api.openweathermap.org/data/2.5/weather?q=mecca&appid=94d1b061cce4a09f00d0ebf1fcdc8f88&units=metric"
-            })
-            console.log(response.data) 
-            temperatureTextElement.textContent = `${response.data.main.temp}°C `
-            //https://rodrigokamada.github.io/openweathermap/images/
-            //console.log(response.data.weather[0].main)
-            temperatureIconElement.src = `https://rodrigokamada.github.io/openweathermap/images/${response.data.weather[0].icon}_t.png`
-            temperatureCityElement.textContent = response.data.name
+        try{
+            const response = await axios({ //axios takes an argument (an obj)
+                    method: 'get',
+                    url: "https://api.openweathermap.org/data/2.5/weather?q=mecca&appid=94d1b061cce4a09f00d0ebf1fcdc8f88&units=metric"
+                })
+                console.log(response.data) 
+                temperatureTextElement.textContent = `${response.data.main.temp}°C `
+                //https://rodrigokamada.github.io/openweathermap/images/
+                //console.log(response.data.weather[0].main)
+                temperatureIconElement.src = `https://rodrigokamada.github.io/openweathermap/images/${response.data.weather[0].icon}_t.png`
+                temperatureCityElement.textContent = response.data.name
+        }        
+        catch( error ){
+            console.error("Something went wrong while fetching the weather:", error);
+        }
 
     }
 
@@ -63,28 +68,38 @@ function init(){
 /////////////////////////////////////////////// Random Quote from Zenquotes ///////////////////////////////////////////////
  
     async function getForismaticQuote(){ //using Zenquotes API
-        const response = await axios({ //axios takes an argument (an obj)
-                method: 'get',
-                url: "https://zenquotes.io/api/random"
-            })
-            //console.log(response) 
-            console.log(response.data[0].q) 
-            console.log(response.data[0].a) 
-            quoteElement.textContent = `"${response.data[0].q}"`
-            quoteAuthorElement.textContent = `-${response.data[0].a}`
-            
+        try{
+            const response = await axios({ //axios takes an argument (an obj)
+                    method: 'get',
+                    url: "https://zenquotes.io/api/random"
+                })
+                //console.log(response) 
+                console.log(response.data[0].q) 
+                console.log(response.data[0].a) 
+                quoteElement.textContent = `"${response.data[0].q}"`
+                quoteAuthorElement.textContent = `-${response.data[0].a}`
+        }
+        catch( error ){
+            console.error("Something went wrong while fetching the quote:", error);
+        }
+
 
     }
 
     getForismaticQuote()
 
 /////////////////////////////////////////////////////// Today's Date ///////////////////////////////////////////////////////
+    
 
-    let todaysDate = new Date()
-    let hour = todaysDate.getHours();
-    let minute = todaysDate.getMinutes();
+    function updateTime() {
+        let todaysDate = new Date();
+        let hour = todaysDate.getHours().toString().padStart(2, '0')
+        let minute = todaysDate.getMinutes().toString().padStart(2, '0')
 
-    dataElement.textContent = `${hour}:${minute}`
+        dataElement.textContent = `${hour}:${minute}`;
+    }
+    updateTime()
+    setInterval(updateTime, 1000)
 
 
 //////////////////////////////////////////////////////// To-do List ////////////////////////////////////////////////////////
