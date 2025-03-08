@@ -2,7 +2,7 @@
 
 Hi there 👋! Welcome to the **Momentum Lab** project.
 
-This was a lab from the **Software Engineering Bootcamp** provided by General Assembly. Each participant worked individually to develop their own Momentum-like website—and here’s my version!
+This was a lab from the **Software Engineering Bootcamp** provided by **General Assembly**. Each participant worked individually to develop their own Momentum-like website—and here’s my version!
 
 
 ## 📜 Project Overview
