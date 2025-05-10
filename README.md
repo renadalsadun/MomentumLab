@@ -1,11 +1,11 @@
 # Momentum Lab Clone
 
-Hi there 👋! Welcome to the **Momentum Lab** project.
+Welcome to the **Momentum Lab** project.
 
-This was a lab from the **Software Engineering Bootcamp** provided by **General Assembly**. Each participant worked individually to develop their own Momentum-like website—and here’s my version!
+This was a lab from the **Software Engineering Bootcamp** provided by **General Assembly**. Each participant worked individually to develop their own Momentum-like website, and here’s my version!
 
 
-## 📜 Project Overview
+## Project Overview
 
 This web page displays the following features:
 
@@ -23,6 +23,7 @@ This web page displays the following features:
 
 - The to-do list will **disappear** upon page refresh.
 - You cannot **delete** items from the to-do list yet.
+- The need for CORS extension in order to see the quotes. 
   
 ### Technologies Used
 
@@ -34,7 +35,7 @@ This web page displays the following features:
 - **ZenQuotes API** for daily motivational quotes.
 
 
-## 🚀 Live Demo
+## Live Demo
 
 Check out the live demo of the **Momentum Lab Clone** here:  
 [https://RenadAlsadun.github.io/MomentumLab/](https://RenadAlsadun.github.io/MomentumLab/)
